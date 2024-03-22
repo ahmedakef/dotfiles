@@ -111,9 +111,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export WORKON_HOME=~/Envs
-export PROJECT_HOME=~/developement/server_sdk
 export GOPATH=$HOME/go
-alias cleandockers=~/developement/docker-cleanup.sh
 alias python=python3
 alias bpython=bpython3
