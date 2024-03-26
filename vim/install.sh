@@ -16,6 +16,8 @@ ln -s "$DOTFILES_DIR/vim/plugins.vim" ~/.vim/plugins.vim
 ln -s "$DOTFILES_DIR/vim/.vimrc" ~/.vimrc
 
 
-# then Install Plugins:
-# Launch vim and run :PluginInstall
-# To install from command line: vim +PluginInstall +qall
+vim +PluginInstall +qall
+
+
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py --all

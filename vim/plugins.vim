@@ -7,6 +7,9 @@ Plugin 'macguirerintoul/night_owl_light.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 
+" Formatting
+Plugin 'Chiel92/vim-autoformat'
+
 " Auto Completion
 Bundle "Valloric/YouCompleteMe"
 

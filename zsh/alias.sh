@@ -4,6 +4,7 @@ export PATH=$PATH:/Users/aakef/go/bin/
 export EDITOR="vim"
 alias python=python3
 alias vi=vim
+set -o vi
 
 # Package Manager
 alias i="brew install"
