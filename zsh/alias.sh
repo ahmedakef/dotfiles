@@ -1,4 +1,6 @@
 # General
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 export DOTFILES_DIR="/Users/aakef/Personal/dotfiles"
 export PATH=$PATH:/Users/aakef/go/bin/
 export EDITOR="vim"

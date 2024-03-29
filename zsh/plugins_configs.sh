@@ -14,7 +14,7 @@ export FZF_DEFAULT_OPTS="\
   --preview-window='right:60%:wrap,<50(bottom,50%)' \
   --history='$HOME/.fzf_history' --history-size=50 \
   --bind='ctrl-r:execute(bat --style=numbers {} || less -f {})' \
-  --bind='ctrl-e:execute(vim {})' \
+  --bind='ctrl-e:execute(vi {}  < /dev/tty > /dev/tty)' \
   --bind='alt-w:toggle-preview-wrap' \
   --bind='ctrl-d:half-page-down' \
   --bind='ctrl-u:half-page-up' \

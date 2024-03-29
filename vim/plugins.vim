@@ -6,6 +6,8 @@ Plugin 'macguirerintoul/night_owl_light.vim'
 " File Navigation
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ryanoasis/vim-devicons'
+
 
 " Formatting
 Plugin 'Chiel92/vim-autoformat'

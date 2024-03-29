@@ -16,6 +16,7 @@ ln -s "$DOTFILES_DIR/vim/plugins.vim" ~/.vim/plugins.vim
 ln -s "$DOTFILES_DIR/vim/.vimrc" ~/.vimrc
 
 
+brew install ripgrep
 vim +PluginInstall +qall
 
 # heavy command, do it only once
