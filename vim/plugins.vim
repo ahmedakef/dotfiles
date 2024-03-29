@@ -28,3 +28,8 @@ Bundle "fatih/vim-go"
 " yaml
 " provides indentation and syntax highlighting for yaml
 Plugin 'mrk21/yaml-vim'                 
+
+
+" fuzzy finder
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'

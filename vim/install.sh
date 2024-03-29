@@ -18,6 +18,6 @@ ln -s "$DOTFILES_DIR/vim/.vimrc" ~/.vimrc
 
 vim +PluginInstall +qall
 
-
-cd ~/.vim/bundle/YouCompleteMe
-python3 install.py --all
+# heavy command, do it only once
+# cd ~/.vim/bundle/YouCompleteMe
+# python3 install.py --all

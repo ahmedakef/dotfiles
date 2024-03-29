@@ -90,6 +90,8 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
+
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -128,7 +130,12 @@ colorscheme PaperColor "also 'night_owl_light'"
 " Shortcuts "
 
 set backspace=indent,eol,start
-let mapleader = "'"
+let mapleader="."
+
+" next and previous buffer "
+nnoremap <silent> <F12> :bn<CR>
+nnoremap <silent> <S-F12> :bp<CR> 
+
 
 " Formatting "
 noremap <F3> :Autoformat<CR>
@@ -153,3 +160,8 @@ nnoremap <C-f> :NERDTreeFind<CR>
 let g:airline_theme='solarized' " there is also 'papercolor'
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
+
+
+" fzf"
+nnoremap <silent> <leader>o :Files<CR>
+nnoremap <silent> <leader>p :History<CR>
