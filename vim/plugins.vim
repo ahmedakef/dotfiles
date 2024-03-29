@@ -22,6 +22,7 @@ Plugin 'NLKNguyen/papercolor-theme'
 
 
 " Comments
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
 
 " Go

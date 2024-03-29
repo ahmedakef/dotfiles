@@ -35,6 +35,7 @@ set is "incremental search
 set nobackup
 set nowritebackup
 set undofile
+set noswapfile
 
 " copy and paste
 vmap <C-c> "+yi
@@ -65,10 +66,10 @@ let mapleader="."
 
 " next and previous buffer "
 nnoremap <silent> <F12> :bn<CR>
-nnoremap <silent> <S-F12> :bp<CR> 
+nnoremap <silent> <S-F12> :bp<CR>
 
 " Formatting "
-noremap <F3> :Autoformat<CR>
+noremap <C-f> :Autoformat<CR>
 
 " set ctrl-shift to duplicate lines, works in visual mode as well.
 "nnoremap <silent> <C-d> :call setreg('+', getline('.'))<CR>o<ESC>p
@@ -79,10 +80,7 @@ nnoremap <C-i> :PluginInstall<CR> :q<CR>
 
 
 " NERDTree"
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 set guifont=JetBrainsMono_Nerd_Font:h11
 
 
