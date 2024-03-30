@@ -103,6 +103,8 @@ set guifont=JetBrainsMono_Nerd_Font:h11
 let g:airline_theme='solarized' " there is also 'papercolor'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+let g:airline_section_z = 'Ln %l, Col %v'
 
 
 " fzf"
