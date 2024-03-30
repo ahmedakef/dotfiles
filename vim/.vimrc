@@ -23,7 +23,7 @@ set rtp+=/usr/local/opt/fzf
 
 
 " General
-set number
+set number relativenumber 
 set encoding=UTF-8
 set scrolloff=5
 set hidden " allow to switch buffers without saving
@@ -63,6 +63,19 @@ colorscheme PaperColor "also I liked 'night_owl_light'"
 " Shortcuts "
 
 let mapleader="."
+
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+
+nnoremap <silent> <leader>q :call ToggleQuickFix()<cr>
+
+
+nnoremap <silent> <leader>m :make<CR>:redraw<CR>:copen<CR>
 
 " next and previous buffer "
 nnoremap <silent> <F12> :bn<CR>
