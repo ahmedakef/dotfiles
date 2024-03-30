@@ -29,7 +29,9 @@ set scrolloff=5
 set hidden " allow to switch buffers without saving
 
 " search
-set is "incremental search
+set incsearch "incremental search
+set ignorecase "ignore case when searching
+set hlsearch "highlight search results
 
 " backup
 set nobackup
@@ -84,8 +86,8 @@ nnoremap <silent> <S-F12> :bp<CR>
 " Formatting "
 noremap <C-f> :Autoformat<CR>
 
-" set ctrl-shift to duplicate lines, works in visual mode as well.
-"nnoremap <silent> <C-d> :call setreg('+', getline('.'))<CR>o<ESC>p
+" set ctrl-d to duplicate lines, works in visual mode as well.
+"nnoremap <silent> <C-d> yyp
 
 
 " Vundle"
