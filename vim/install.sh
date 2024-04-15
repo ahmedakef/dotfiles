@@ -17,8 +17,8 @@ ln -s "$DOTFILES_DIR/vim/.vimrc" ~/.vimrc
 
 
 if [[ "$(uname)" == "Linux" ]]; then
-    apt-get update
-    apt-get install ripgrep
+    sudo apt-get update
+    sudo apt-get install ripgrep
 else
     brew install ripgrep
 fi

@@ -23,8 +23,8 @@ fi
 brew install pure bat fd
 
 if [[ "$(uname)" == "Linux" ]]; then
-    apt-get update
-    apt-get install pure bat fd
+    sudo apt-get update
+    sudo apt-get install pure bat fd
 else
     brew install pure bat fd
 fi
