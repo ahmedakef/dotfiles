@@ -24,7 +24,12 @@ brew install pure bat fd
 
 if [[ "$(uname)" == "Linux" ]]; then
     sudo apt-get update
-    sudo apt-get install pure bat fd
+    sudo apt-get install pure bat fd-find
+    # installing bat
+    wget https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-musl_0.24.0_amd64.deb
+    sudo dpkg -i bat-musl_0.24.0_amd64.deb
+
+
 else
     brew install pure bat fd
 fi

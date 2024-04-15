@@ -50,3 +50,8 @@ ts() {
 tj() {
     python3 -c "print('_'.join('$*'.split(' ')), end='')"
 }
+
+
+
+
+ln -s $(which fdfind) ~/.local/bin/fd
