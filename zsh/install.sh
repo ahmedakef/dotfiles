@@ -29,7 +29,10 @@ if [[ "$(uname)" == "Linux" ]]; then
     wget https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-musl_0.24.0_amd64.deb
     sudo dpkg -i bat-musl_0.24.0_amd64.deb
 
-
+    # installing fzf
+    wget https://github.com/junegunn/fzf/releases/download/0.50.0/fzf-0.50.0-linux_amd64.tar.gz
+    tar xvf fzf-0.50.0-linux_amd64.tar.gz
+    sudo cp fzf /usr/local/bin
 else
     brew install pure bat fd
 fi
