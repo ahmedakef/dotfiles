@@ -54,5 +54,7 @@ tj() {
 
 
 if [[ "$(uname)" == "Linux" ]]; then
-    ln -s $(which fdfind) /usr/local/bin/fd
+    if [[ ! -e /usr/local/bin/fd ]]; then
+        ln -s $(which fdfind) /usr/local/bin/fd
+    fi
 fi
