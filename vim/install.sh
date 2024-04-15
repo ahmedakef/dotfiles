@@ -16,7 +16,12 @@ ln -s "$DOTFILES_DIR/vim/plugins.vim" ~/.vim/plugins.vim
 ln -s "$DOTFILES_DIR/vim/.vimrc" ~/.vimrc
 
 
-brew install ripgrep
+if [[ "$(uname)" == "Linux" ]]; then
+    apt-get update
+    apt-get install ripgrep
+else
+    brew install ripgrep
+fi
 vim +PluginInstall +qall
 
 # heavy command, do it only once
