@@ -18,8 +18,12 @@ ln -s "$DOTFILES_DIR/vim/.vimrc" ~/.vimrc
 
 if [[ "$(uname)" == "Linux" ]]; then
     sudo apt update
-    sudo apt install ripgrep
-    sudo apt install build-essential cmake vim python3-dev
+    # sudo apt -y install ripgrep
+
+    # installing rg
+    wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+    sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
+    sudo apt -y install build-essential cmake vim python3-dev
 
 else
     brew install ripgrep

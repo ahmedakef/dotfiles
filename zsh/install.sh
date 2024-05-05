@@ -25,7 +25,7 @@ if [[ "$(uname)" == "Linux" ]]; then
     sudo apt-get update
     # use this apt for updated environments
     # but if package manager have old versions, use the following
-    # sudo apt-get install pure bat fd-find
+    # sudo apt-get install -y pure bat fd-find
     # installing bat
     wget https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-musl_0.24.0_amd64.deb
     sudo dpkg -i bat-musl_0.24.0_amd64.deb
