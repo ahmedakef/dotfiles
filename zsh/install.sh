@@ -36,7 +36,6 @@ if [[ "$(uname)" == "Linux" ]]; then
 else
     brew install pure bat fd
 fi
-source ~/.zshrc
 
 
 # settings to edit in iTerm2
