@@ -1,7 +1,6 @@
 # General
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
-export DOTFILES_DIR="$HOME/Personal/dotfiles"
 export PATH=$PATH:$HOME/go/bin/
 export EDITOR="vim"
 alias python=python3
