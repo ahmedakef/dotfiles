@@ -37,3 +37,7 @@ else
     brew install pure bat fd
 fi
 source ~/.zshrc
+
+
+# settings top edit in iTerm2
+# https://github.com/junegunn/fzf/issues/164
