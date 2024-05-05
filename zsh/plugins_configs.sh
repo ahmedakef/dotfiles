@@ -70,3 +70,10 @@ _fzf_compgen_dir() {
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
+
+
+
+# pure prompt
+
+PURE_GIT_PULL=0
+PURE_GIT_UNTRACKED_DIRTY=0

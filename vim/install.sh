@@ -24,8 +24,9 @@ if [[ "$(uname)" == "Linux" ]]; then
 else
     brew install ripgrep
 fi
-vim +PluginInstall +qall
 
 # heavy command, do it only once
 # cd ~/.vim/bundle/YouCompleteMe
 # python3 install.py --all
+
+vim +PluginInstall +qall
