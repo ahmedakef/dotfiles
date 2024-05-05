@@ -62,9 +62,9 @@ rtmux() {
     }
 
 
-
-if [[ "$(uname)" == "Linux" ]]; then
-    if [[ ! -e /usr/local/bin/fd ]]; then
-        ln -s $(which fdfind) /usr/local/bin/fd
-    fi
-fi
+# probably if installed using package manager
+# if [[ "$(uname)" == "Linux" ]]; then
+#     if [[ ! -e /usr/local/bin/fd ]]; then
+#         ln -s $(which fdfind) /usr/local/bin/fd
+#     fi
+# fi
