@@ -2,9 +2,14 @@
 set -ox pipefail
 
 
+if [ -z "$DOTFILES_DIR" ]; then
+    echo "Error: DOTFILES_DIR environment variable is not set."
+    exit 1
+fi
 
-ln -s alias.sh ~/alias.sh
-ln -s plugins_configs.sh ~/plugins_configs.sh
+
+ln -s "$DOTFILES_DIR/zsh/alias.sh" ~/alias.sh
+ln -s "$DOTFILES_DIR/zsh/plugins_configs.sh" ~/plugins_configs.sh
 
 
 if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
