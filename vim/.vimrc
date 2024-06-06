@@ -23,7 +23,7 @@ set rtp+=/usr/local/opt/fzf
 
 
 " General
-set number relativenumber 
+set number relativenumber
 set encoding=UTF-8
 set scrolloff=5
 set hidden " allow to switch buffers without saving
@@ -37,6 +37,7 @@ set hlsearch "highlight search results
 set nobackup
 set nowritebackup
 set undofile
+set undodir=~/.vim/undodir
 set noswapfile
 
 " copy and paste

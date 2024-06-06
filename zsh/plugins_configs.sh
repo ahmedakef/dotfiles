@@ -11,7 +11,7 @@ export FZF_DEFAULT_OPTS="\
   --multi \
   --info=inline \
   --preview='if [ -d {} ]; then tree -C -L 2 {}; elif [ -f {} ]; then bat -f --style=numbers {}; fi' \
-  --preview-window='right:60%:wrap,<50(bottom,50%)' \
+  --preview-window='right:50%:wrap,<50(bottom,50%)' \
   --history='$HOME/.fzf_history' --history-size=50 \
   --bind='ctrl-r:execute(bat --style=numbers {} || less -f {})' \
   --bind='ctrl-e:execute(vi {}  < /dev/tty > /dev/tty)' \

@@ -6,7 +6,7 @@ export PATH=$PATH:$HOME/go/bin/
 export EDITOR="vim"
 alias python=python3
 alias vi=vim
-alias bat=cat
+alias cat=bat
 # set -o vi
 
 
