@@ -12,7 +12,7 @@ alias cat=bat
 
 # Package Manager
 alias i="brew install"
-alias u="brew upgrade"
+alias u="brew upgrader"
 alias q="brew search"
 
 # git
