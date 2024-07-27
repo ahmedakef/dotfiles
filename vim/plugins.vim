@@ -26,11 +26,15 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
 
 " Go
-Bundle "fatih/vim-go"
+Plugin 'fatih/vim-go'
 
-" yaml
+" Rust
+Plugin 'rust-lang/rust.vim'
+
+" confiuration files: yaml, toml
 " provides indentation and syntax highlighting for yaml
-Plugin 'mrk21/yaml-vim'                 
+Plugin 'stephpy/vim-yaml'
+Plugin 'cespare/vim-toml'
 
 
 " fuzzy finder
