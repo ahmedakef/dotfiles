@@ -8,8 +8,8 @@ if [ -z "$DOTFILES_DIR" ]; then
 fi
 
 
-ln -s "$DOTFILES_DIR/zsh/alias.sh" ~/alias.sh
-ln -s "$DOTFILES_DIR/zsh/plugins_configs.sh" ~/plugins_configs.sh
+ln -vfs "$DOTFILES_DIR/zsh/alias.sh" ~/alias.sh
+ln -vfs "$DOTFILES_DIR/zsh/plugins_configs.sh" ~/plugins_configs.sh
 
 
 if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then

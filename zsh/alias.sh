@@ -9,6 +9,9 @@ alias vi=vim
 alias cat=bat
 # set -o vi
 
+# rust
+#alias d="cargo run"
+alias ch="cargo check"
 
 # Package Manager
 alias i="brew install"
@@ -18,7 +21,7 @@ alias q="brew search"
 # git
 alias m="gco main"
 alias gan="git commit --verbose --all --amend --no-edit"
-alias glod="git --no-pager log -n 5 --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+alias glod="git --no-pager log -n 8 --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
 
 # arc
 alias s="gco main && arc tidy && git pull && arc cascade -hc main && arc sync --dependencies main && gco -"

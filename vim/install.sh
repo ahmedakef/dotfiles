@@ -12,8 +12,8 @@ mkdir -p ~/.vim/bundle
 if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
 fi
-ln -s "$DOTFILES_DIR/vim/plugins.vim" ~/.vim/plugins.vim
-ln -s "$DOTFILES_DIR/vim/.vimrc" ~/.vimrc
+ln -vfs "$DOTFILES_DIR/vim/plugins.vim" ~/.vim/plugins.vim
+ln -vfs "$DOTFILES_DIR/vim/.vimrc" ~/.vimrc
 
 
 if [[ "$(uname)" == "Linux" ]]; then
