@@ -112,3 +112,20 @@ let g:airline_section_z = 'Ln %l, Col %v'
 nnoremap <silent> <leader>o :Files<CR>
 nnoremap <silent> <leader>p :History<CR>
 nnoremap <Space>/ :Rg<Space>
+
+" folding
+if has('folding')
+  if has('windows')
+    let &fillchars='vert: '           " less cluttered vertical window separators
+  endif
+  set foldmethod=indent               " not as cool as syntax, but faster
+  set foldlevelstart=1                " start unfolded
+endif
+
+
+
+" mappings
+
+" normal mode
+" Toggle fold at current position.
+nnoremap <Tab> za

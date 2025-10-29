@@ -27,8 +27,8 @@ if [[ "$(uname)" == "Linux" ]]; then
     # but if package manager have old versions, use the following
     # sudo apt-get install -y pure bat fd-find
     # installing bat
-    wget https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-musl_0.24.0_amd64.deb
-    sudo dpkg -i bat-musl_0.24.0_amd64.deb
+    # wget https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-musl_0.26.0_musl-linux-amd64.deb
+    # sudo dpkg -i bat-musl_0.26.0_musl-linux-amd64.deb
 
     # installing fzf
     wget https://github.com/junegunn/fzf/releases/download/0.50.0/fzf-0.50.0-linux_amd64.tar.gz
@@ -36,8 +36,8 @@ if [[ "$(uname)" == "Linux" ]]; then
     sudo cp fzf /usr/local/bin
 
     # installing fd
-    wget https://github.com/sharkdp/fd/releases/download/v9.0.0/fd-musl_9.0.0_amd64.deb
-    sudo dpkg -i fd-musl_9.0.0_amd64.deb
+    # wget https://github.com/sharkdp/fd/releases/download/v10.3.0/fd-musl_10.3.0_amd64.deb
+    # sudo dpkg -i fd-musl_10.3.0_amd64.deb
 else
     brew install pure bat fd
 fi
