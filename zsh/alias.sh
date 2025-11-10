@@ -6,7 +6,11 @@ export PATH=$PATH:$HOME/go/bin
 export EDITOR="vim"
 alias python=python3
 alias vi=vim
-alias cat=bat
+if [[ "$(uname)" == "Linux" ]]; then
+  alias cat=batcat
+else
+  alias cat=bat
+fi
 # set -o vi
 
 # rust
@@ -39,6 +43,8 @@ aff() {
     echo -n "$*" | pbcopy
 }
 
+# sparc
+alias sparc="sparc sync"
 
 # bazel
 alias t="bazel test ...:all"
