@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ox pipefail
+set -eo pipefail
 
 
 if [ -z "$DOTFILES_DIR" ]; then
