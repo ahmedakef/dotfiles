@@ -29,13 +29,13 @@ alias gan="git commit --verbose --all --amend --no-edit"
 alias glod="git --no-pager log -n 8 --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
 
 # arc
-alias s="gco main && arc tidy && git pull && arc cascade -hc main && arc sync --dependencies main && gco -"
-alias af="arc flow"
-alias at="arc tidy"
-alias ad="arc diff --add-all --noautoland --apply-patches --amend-autofixes --allow-untracked --message"
-alias add="arc diff --add-all --noautoland  --apply-patches --amend-autofixes --allow-untracked"
-alias ac="arc cascade -hc main"
-alias al="arc lint --apply-patches"
+# alias s="gco main && arc tidy && git pull && arc cascade -hc main && arc sync --dependencies main && gco -"
+# alias af="arc flow"
+# alias at="arc tidy"
+# alias ad="arc diff --add-all --noautoland --apply-patches --amend-autofixes --allow-untracked --message"
+# alias add="arc diff --add-all --noautoland  --apply-patches --amend-autofixes --allow-untracked"
+# alias ac="arc cascade -hc main"
+# alias al="arc lint --apply-patches"
 
 aff() {
     branchName=$(tj "$*")
