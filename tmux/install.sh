@@ -1,0 +1,9 @@
+#!/bin/bash
+set -eo pipefail
+
+if [ -z "$DOTFILES_DIR" ]; then
+    echo "Error: DOTFILES_DIR environment variable is not set."
+    exit 1
+fi
+
+ln -vfs "$DOTFILES_DIR/tmux/.tmux.conf" ~/.tmux.conf
