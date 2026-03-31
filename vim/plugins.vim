@@ -1,7 +1,7 @@
 " Colors
 "Plugin 'crusoexia/vim-monokai'
 Plugin 'macguirerintoul/night_owl_light.vim'
-
+Plugin 'arcticicestudio/nord-vim'
 
 " File Navigation
 Plugin 'scrooloose/nerdtree'

@@ -61,7 +61,11 @@ endif
 syntax enable
 set t_Co=256   " This is may or may not needed.
 set background=light
-colorscheme PaperColor "also I liked 'night_owl_light'"
+colorscheme nord "also I liked 'night_owl_light'"
+
+"nord theme configs
+let g:nord_cursor_line_number_background = 1
+
 
 " Shortcuts "
 
