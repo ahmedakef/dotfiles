@@ -27,6 +27,7 @@ set number relativenumber
 set encoding=UTF-8
 set scrolloff=5
 set hidden " allow to switch buffers without saving
+set mouse=a " allow vim to handle mouse events when running in tmux
 
 " search
 set incsearch "incremental search
