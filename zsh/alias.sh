@@ -13,55 +13,14 @@ else
 fi
 # set -o vi
 
-# rust
-alias rd="cargo run"
-alias ch="cargo check"
 
-# Package Manager
-alias i="brew install"
-alias u="brew upgrader"
-alias q="brew search"
+# ${0:A:h} means: take $0 (the script path) → make it absolute/canonical → strip the filename to get the directory.
+source "${0:A:h}/alias/brew.sh"
+source "${0:A:h}/alias/git.sh"
+source "${0:A:h}/alias/numbers.sh"
+source "${0:A:h}/alias/text.sh"
+source "${0:A:h}/alias/bazel.sh"
 
-# git
-alias gn="git --no-pager"
-alias m="gco main"
-alias gan="git commit --verbose --all --amend --no-edit"
-alias glod="git --no-pager log -n 8 --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
-
-
-
-#generate numbers
-gen() {
-    n=$1
-    for ((i=0; i<$2; i++)); do
-        echo $n
-        ((n*=2))
-    done
-}
-#generate numbers and convert units
-genu() {
-  n=$1
-  for ((i=0; i<$2; i++)); do
-    if [[ $n -gt 60000 ]]; then
-      printf "%.2fm\n" "$((n / 1000.0 / 60.0))"
-    elif [[ $n -gt 1000 ]]; then
-      printf "%.2fs\n" "$((n / 1000.0))"
-    else
-      echo "$n ms"
-    fi
-    ((n *= 2))
-  done
-}
-
-# ts = text split
-ts() {
-    python3 -c "print(' '.join('$1'.split('_')), end='')" | pbcopy
-}
-
-# tj = text Join
-tj() {
-    python3 -c "print('_'.join('$*'.split(' ')), end='')"
-}
 
 
 # usage rtmux hostname usage name
@@ -81,38 +40,12 @@ rtmux() {
 # fi
 
 
-# alias r="go build -o bin && ./bin"
-
-
 alias cdtemp="cd $(mktemp -d)"
-
-# git stuff
-alias absorb="GIT_SEQUENCE_EDITOR=: git absorb --and-rebase"
-alias slabsorb="sl absorb --apply-changes"
-alias mend="git commit --all --amend --no-edit && sparc 1"
-alias land="arc stack --disable-rebase-check --nounit"
-fixup() {
-    COMMIT=$(git log HEAD ^origin/main --reverse --format="%H" | sed -n $1p) # get nth commit from a reversed git log
-    git commit --all --fixup=$COMMIT
-    GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $COMMIT~1
-}
-
-
-alias gbc="git branch --show-current | tee >(tr -d '\n' | pbcopy)" # copy the current branch name to the clipboard (and still print it)
-# git branch's parent
-gbp() {
-	git show-branch -a 2>/dev/null \
-	| sed "s/].*//" \
-	| grep "\*" \
-	| grep -v "$(git rev-parse --abbrev-ref HEAD)" \
-	| head -n1 \
-	| sed "s/^.*\[//" \
-	| tee >(tr -d '\n' | pbcopy)
-}
 
 
 
 # prettier ls
-alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
-
-
+unalias ls 2>/dev/null
+ls() {
+    eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions "$@"
+}
