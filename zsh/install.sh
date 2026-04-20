@@ -31,8 +31,8 @@ if [[ "$(uname)" == "Linux" ]]; then
     # sudo dpkg -i bat-musl_0.26.0_musl-linux-amd64.deb
 
     # installing fzf
-    wget https://github.com/junegunn/fzf/releases/download/0.50.0/fzf-0.50.0-linux_amd64.tar.gz
-    tar xvf fzf-0.50.0-linux_amd64.tar.gz
+    wget https://github.com/junegunn/fzf/releases/download/v0.71.0/fzf-0.71.0-linux_amd64.tar.gz
+    tar xvf fzf-0.71.0-linux_amd64.tar.gz
     sudo cp fzf /usr/local/bin
 
     # installing fd
