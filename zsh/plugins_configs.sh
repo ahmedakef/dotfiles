@@ -84,7 +84,14 @@ fi
 
 
 gcbfzf() {
-  print -z git checkout $(git branch --format '%(refname:short)' | fzf --height=20% --reverse --info=inline-right --preview='git log $(echo {} | awk "{print \$1}") -n 5 --graph --color --format="%C(white)%h - %C(green)%cs - %C(blue)%s%C(red)%d"')
+  print -z git checkout $(\
+  git branch --format '%(refname:short)' | \
+  fzf \
+  --height=20% \
+  --reverse \
+  --info=inline-right \
+  --preview='git log $(echo {} | awk "{print \$1}") -n 5 --graph --color --format="%C(white)%h - %C(green)%cs - %C(blue)%s%C(red)%d"' \
+  --bind='ctrl-d:execute(git branch -D $(echo {} | awk "{print \$1}"))+abort')
 }
 
 gcb-widget() { zle -I; gcbfzf; }
