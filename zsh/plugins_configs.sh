@@ -72,8 +72,21 @@ _fzf_compgen_dir() {
 eval "$(fzf --zsh)"
 
 
-
 # pure prompt
 
 PURE_GIT_PULL=0
 PURE_GIT_UNTRACKED_DIRTY=0
+if [[ "$(uname)" == "Linux" ]]; then
+  PURE_PROMPT_SYMBOL=" ❯"
+else
+  PURE_PROMPT_SYMBOL=" ❯"
+fi
+
+
+gcbfzf() {
+  print -z git checkout $(git branch --format '%(refname:short)' | fzf --height=20% --reverse --info=inline-right --preview='git log $(echo {} | awk "{print \$1}") -n 5 --graph --color --format="%C(white)%h - %C(green)%cs - %C(blue)%s%C(red)%d"')
+}
+
+gcb-widget() { zle -I; gcbfzf; }
+zle -N gcb-widget
+bindkey '^g' gcb-widget   # Ctrl+g opens branch selector
