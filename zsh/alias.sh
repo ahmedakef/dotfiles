@@ -47,5 +47,5 @@ alias cdtemp="cd $(mktemp -d)"
 # prettier ls
 unalias ls 2>/dev/null
 ls() {
-    eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions "$@"
+    eza --color=always --long --no-filesize --icons=always "$@"
 }
